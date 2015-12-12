@@ -1,0 +1,116 @@
+<html>
+
+
+<head>
+    <title>Space Clicker</title>
+    <link rel="stylesheet" href="fonts.css">
+</head>
+
+<body>
+    <script type="text/javascript">
+
+            console.log("textWidth");
+
+    var clicks = 0;
+    function onClick() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+
+    // window.onload = shift;
+    // window.onresize = shift;
+
+    // var shift = function(){
+
+    //                 console.log("textWidth2");
+
+
+    //     var textWidth = $('.text').width();
+    //     textWidth = -textWidth;
+
+    //     console.log(textWidth);
+
+    //     $('.text').css(margin-left,textWidth);
+
+    // }
+
+
+    </script>
+
+
+
+    <style>
+   
+  
+
+html {
+  width: 100%;
+  height: 100%;
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(-60deg, #1ec8c2,#4e00ff ); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-60deg, #1ec8c2,#4e00ff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(-60deg, #1ec8c2,#4e00ff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-60deg, #1ec8c2,#4e00ff); /* Standard syntax */
+}
+
+
+  .wrapper {
+      background-image: url("shapes.png");
+      background-repeat:no-repeat;
+      background-size:contain;
+      background-position:center;
+  }
+
+    .text{
+        color: white;
+        font-size: 100px; 
+        font-family: 'Circular', 'Arial';
+        text-align: center;
+        bottom:0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+          font-family: 'Circular', 'Arial';
+    }
+
+    .text p {
+      padding: 0;
+      margin: 0;
+      padding-bottom: 120px;
+    }
+
+    p {
+              font-weight: 900;
+
+    }
+
+    
+ /*   .footer {
+      background:rgba(0,0,0,0.5);
+      height: 200px;
+      bottom: 0;
+    }
+*/
+    </style>
+
+    <div class="wrapper">
+
+        <div class="tinkerButton" style="width:150px; height:150px; position:absolute; left:50%; margin-left:-70px; top:50%; margin-top:-90px; ">
+
+            <img src="Button.png" width="100%"; height="100%" onClick="onClick()">
+
+        </div>
+
+        <div class="text">
+
+                <p>Taps: <a id="clicks">0</a></p>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

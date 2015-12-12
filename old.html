@@ -1,0 +1,126 @@
+<html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+        <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/stylesheet.css">
+    <link rel="stylesheet" href="styles/projects.css">
+
+<head>
+    <title>Space Clicker</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+
+    var clicks = 0;
+    function onClick() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+
+        // WHEN JQUERY WORKS
+
+        $('.text').css('visibility', 'visible');
+
+
+    };
+
+    window.onload = shift;
+    window.onresize = shift;
+
+    var shift = function(){
+
+        //on load and on resizee
+
+        var textWidth = $('.text').width();
+        textWidth = -textWidth/2;
+
+        console.log(textWidth);
+
+        $('.text').css('margin-left',textWidth);
+
+    }
+
+
+    </script>
+
+
+
+    <style>
+
+    body{
+
+        width: 100%;
+        height: 100%;
+    }
+
+  /*  html {
+        background-image: url("/shapes.png");
+        z-index: 10;
+        position: relative;
+    }*/
+
+    @font-face {
+  font-family: 'Circular';
+  font-weight: bold;
+  font-style: normal;
+  src: url('../fonts/circular/lineto-circular-bold.eot');
+  src: url('../fonts/circular/lineto-circular-bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/circular/lineto-circular-bold.woff') format('woff'),
+       url('../fonts/circular/lineto-circular-bold.ttf') format('truetype'),
+       url('../fonts/circular/lineto-circular-bold.svg#CircularBold') format('svg');
+}
+
+    .wrapper {
+
+        width: 100%;
+        height: 100%;
+
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(-90deg, red, yellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-90deg, red, yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(-90deg, red, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-90deg, red, yellow); /* Standard syntax */
+}
+
+    .text{
+
+        width: auto;
+        top: 75%;
+        margin-top:-50px;
+        position: absolute;
+        left:50%;
+        color: white;
+        font-size: 100px; 
+        font-family: 'Circular', 'Arial';
+
+    }
+
+
+
+    </style>
+
+    <div class="wrapper">
+
+        <div class="tinkerButton" style="width:150px; height:150px; position:absolute; left:50%; margin-left:-60px; top:50%; margin-top:-90px; ">
+
+            <img src="Button.png" width="100%"; height="100%" onClick="onClick()">
+
+        </div>
+
+        <div class="text" id="js-text">
+
+                <p>Taps: <a id="clicks">0</a></p>
+
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
