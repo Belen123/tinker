@@ -1,4 +1,4 @@
-$(document).ready(function($) {
+(function($) {
   $.fn.nodoubletapzoom = function() {
       $(this).bind('touchstart', function preventZoom(e) {
         var t2 = e.timeStamp
